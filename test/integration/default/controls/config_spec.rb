@@ -59,7 +59,7 @@ control 'PowerDNS configuration' do
     it { should be_file }
     it { should be_owned_by 'pdns' }
     it { should be_grouped_into 'pdns' }
-    its('mode') { should cmp '0644' }
+    its('mode') { should cmp '0640' }
     its('content') { should include config_file }
   end
 end
